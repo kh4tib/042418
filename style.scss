@@ -64,10 +64,17 @@ body {
             padding: 0 2rem;
             color: #000;
             margin-left: -1px;
+            transition: 300ms ease-in-out;
 
             &::-webkit-input-placeholder {
                 color: #000;
                 font-family: 'Playfair Display', serif;
+            }
+            
+            &:active,
+            &:focus {
+                border: 1px solid #ffd35a;
+                outline: none;
             }
         }
 
@@ -78,6 +85,20 @@ body {
             padding: 0 2rem;
             color: #000;
             margin-left: -1px;
+            cursor: pointer;
+            outline: none;
+            transition: 300ms ease-in-out;
+
+            &:hover {
+                color: #fff;
+                background: #ffd35a;
+                border: 1px solid #ffd35a;
+                outline: none;
+            }
+
+            &:active {
+                background: darken($color: #ffd35a, $amount: 10%)
+            }
         }
     }
 }
